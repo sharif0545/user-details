@@ -12,9 +12,9 @@ const AllPosts = (props) => {
      
         <div style={{width:'15%', margin:'20px 50px',  float:'left', padding:'20px', border:'1px solid gray', borderRadius:'20px'}}>
             <div style={{alignItems:'center', justifyContent: 'center'}}>
-              <h1>Post Id :  {id} </h1>
-                    <h3>Post Title : {resTitle} </h3>
-              <strong> Post Comments : {resBody}</strong>
+              <h1 style={{color:'lightGray'}}>Post Id :  {id} </h1>
+                    <p> <strong>Post Title</strong> : {resTitle} </p>
+              <p><strong> Post Comments :</strong>  {resBody}</p>
             </div>
             <br/>
           <div style={{alignItems:'center', justifyContent: 'center'}}>
