@@ -4,14 +4,12 @@ import AllPosts from '../allPosts/AllPosts';
 
 const PostView = () => {
     const [posts, setPosts] = useState([]);
-  
     useEffect(() =>{
         // posts
         fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res => res.json())
         .then(data => {
             setPosts(data)
-            // console.log(data);
           
         })
                

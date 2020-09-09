@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import fakeData from '../fakeData';
-
 // material ui
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -10,12 +8,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
-
 const PersonDetails = (props) => {
     const {key} = useParams();
-    // console.log(fakeData);
-    const details = fakeData.find(userPost => userPost.id === key);
-    // console.log(details);
      
    const [posts, setPosts] = useState({});
     const [images, setImages] = useState({});
@@ -34,7 +28,6 @@ const PersonDetails = (props) => {
         .then(res => res.json())
         .then(data => {
             setImages(data.results[0])
-            // console.log(data);
         })
         
     }, [key])
@@ -50,7 +43,6 @@ const useStyles = makeStyles({
   });
   
   const classes = useStyles();
-
     
     return (
     <div style={{margin: '50px 100px'}}>
